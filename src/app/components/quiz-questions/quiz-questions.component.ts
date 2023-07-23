@@ -45,7 +45,7 @@ export class QuizQuestionsComponent implements OnInit {
   onSubmit() {
     this.questionsService.setResults = this.questions;
     localStorage.setItem('questions', JSON.stringify(this.questions));
-    this.router.navigate(['/results']);
+    this.router.navigate(['./results']);
   }
 
   isSubmitEnabled() {
