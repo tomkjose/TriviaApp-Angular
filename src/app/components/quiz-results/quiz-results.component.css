@@ -1,0 +1,60 @@
+.result-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.result-btn {
+  border: 1px solid green;
+  background-color: transparent;
+  color: green;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  cursor: pointer;
+  margin: 1.4rem;
+  width: 100%;
+  position: relative;
+}
+
+.result-option-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.result-score {
+  background-color: red;
+  padding: 0.4rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.correct-answer {
+  background-color: green;
+  color: white;
+}
+
+.wrong-answer {
+  background-color: red;
+  color: white;
+}
+
+.selected-answer {
+  background-color: green;
+  color: white;
+}
+
+.score-low {
+  background-color: red;
+  color: black;
+}
+
+.score-medium {
+  background-color: yellow;
+  color: black;
+}
+
+.score-high {
+  background-color: green;
+  color: black;
+}

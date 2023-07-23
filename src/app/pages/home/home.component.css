@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home-title {
+  padding: 2rem;
+}
+
+.home-select {
+  display: flex;
+  width: 100%;
+}

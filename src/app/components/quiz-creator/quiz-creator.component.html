@@ -1,0 +1,23 @@
+<form class="quiz-form" (ngSubmit)="onCreate(forms)" #forms="ngForm">
+    <select id="categorySelect" class="quiz-select" [(ngModel)]="category" name="category" ngModel required>
+        <option value=0>Select a category</option>
+        <option *ngFor="let category of categoryArray" [value]="category.value">
+            {{ category.label }}</option>
+    </select>
+    <select id="difficultySelect" class="quiz-select" [(ngModel)]="difficulty" name="difficulty" ngModel required>
+        <option value="">Select difficulty</option>
+        <option *ngFor="let difficulty of difficultyArray" [value]="difficulty">{{ difficulty }}</option>
+    </select>
+    <button id="createBtn" class="quiz-btn" type="submit" [disabled]="!forms.valid">Create</button>
+
+</form>
+<div class="error" *ngIf="errormessage">
+    <span>{{errormessage}}</span>
+
+</div>
+<div *ngIf="isLoading">
+    <app-loader></app-loader>
+</div>
+<div *ngIf="!isLoading&&isValidSubmit" class="quiz-questions">
+    <app-quiz-questions></app-quiz-questions>
+</div>

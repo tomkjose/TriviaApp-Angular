@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" #forms="ngForm" class="question-form">
+    <div *ngFor="let question of questions; let i = index" class="question-container">
+        <p [innerHTML]="question.question"> </p>
+        <div class="question-option-container">
+            <div *ngFor="let answer of question.answers" class="question-option">
+                <div class="question-btn">
+                    <input type="radio" ngModel name="question{{ i }}" [value]="answer"
+                        [(ngModel)]="question.selectedAnswer" required />
+                    <label class="btn" [innerHTML]="answer"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" [hidden]="!isSubmitEnabled()||forms.form.untouched" class="question-submit ">Submit</button>
+</form>

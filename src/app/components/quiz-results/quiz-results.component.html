@@ -1,0 +1,17 @@
+<div *ngFor="let result of results">
+    <div [innerHTML]="result.question"> </div>
+    <div class="result-options">
+        <div *ngFor="let options of result.answers" class="result-option-container">
+            <div class="result-btn" [ngClass]="{
+                'correct-answer': result.selectedAnswer === result.correct_answer && result.selectedAnswer === options,
+                'wrong-answer': result.correct_answer === options && result.selectedAnswer !== options,
+                'selected-answer': result.selectedAnswer === options && result.selectedAnswer !== result.correct_answer
+              }" [innerHTML]="options">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="result-score"
+    [ngClass]="{'score-low':score==0||score>=1,'score-medium':score==2||score>=3,'score-high':score==4||score>=5}">your
+    score is {{score}} out of 5 </div>

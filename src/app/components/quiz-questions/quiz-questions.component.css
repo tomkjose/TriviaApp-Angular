@@ -1,0 +1,72 @@
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.question-option {
+  width: 100%;
+  margin: 1rem;
+}
+
+.question-option-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.question-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-btn {
+  border: 1px solid green;
+  background-color: transparent;
+  color: green;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  cursor: pointer;
+  margin: 1.4rem;
+  width: 100%;
+  position: relative;
+}
+
+.question-submit {
+  background-color: gray;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.question-btn label,
+.question-btn input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.question-btn input[type="radio"] {
+  opacity: 0.011;
+  z-index: 100;
+  width: 100%;
+}
+
+.question-btn input[type="radio"]:checked + label {
+  background: green;
+  color: white;
+  border-radius: 4px;
+}
+
+.question-btn label {
+  cursor: pointer;
+  z-index: 90;
+  cursor: pointer;
+}
